@@ -9,6 +9,15 @@
 #define TagRoot		1
 #define TagNode		2
 #define TagLeaf		4
+#define NoError		0
+
+typedef void* Nullptr;
+Nullptr null_ptr = 0;
+
+#define find_last(x)	find_last_linear(x)
+#define reterr(x) \
+	errno = (x); \
+	return null_ptr
 
 typedef unsigned int int32;
 typedef unsigned short int int16;
